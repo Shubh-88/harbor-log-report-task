@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # harbor-log-report
 
 A Harbor TB2 evaluation task: parse an Apache-style access log into a JSON summary report.
