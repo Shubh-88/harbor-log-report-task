@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # harbor-log-report
 
 A Harbor TB2 evaluation task: parse an Apache-style access log into a JSON summary report.
@@ -154,3 +155,68 @@ passed: 0  failed: 3  total: 3
 | `tests/test.sh` | Output path fixed from `/app/reward.txt` → `/logs/verifier/`; added `--ctrf` flag |
 | `tests/test_outputs.py` | Tests now assert actual computed values, not just file existence |
 | `instruction.md` | Added output path, exact key names, numbered success criteria |
+=======
+# harbor-log-report-task
+Handshake AI log reports task
+
+# Harbor Log Report Task
+
+## Overview
+
+This repository contains a Harbor (Terminal-Bench 2) task that parses an Apache access log and generates a JSON summary report.
+
+The generated report contains:
+
+- total_requests
+- unique_ips
+- top_path
+
+## Project Structure
+
+```
+environment/
+solution/
+tests/
+task.toml
+instruction.md
+```
+
+## Requirements
+
+- Docker
+- Harbor
+- Python 3.11+
+
+## Running
+
+Build:
+
+```bash
+harbor build -p .
+```
+
+Run Oracle:
+
+```bash
+harbor run -p . --agent oracle
+```
+
+Run NOP:
+
+```bash
+harbor run -p . --agent nop
+```
+
+## Expected Behaviour
+
+- Oracle should receive reward **1.0**
+- NOP should receive reward **< 1.0**
+
+## Files
+
+- `task.toml` — Harbor configuration
+- `instruction.md` — Task instructions
+- `environment/` — Docker image and input data
+- `solution/` — Reference solution
+- `tests/` — Verification tests
+>>>>>>> 80fa38ef0f33a89ea9f97a5ac047a92257e85d57
